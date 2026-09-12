@@ -1,33 +1,33 @@
 ---
-import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
-import { site } from "../data/site";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CaseCard from "../../components/CaseCard.astro";
+import { getCollection } from "astro:content";
 
-interface Props {
-  title: string;
-  description?: string;
-  currentPage?: string;
-}
-
-const {
-  title,
-  description = "Short-form content operations for agencies and brands. Four client accounts, eight videos a day, published without missing a slot.",
-  currentPage = "",
-} = Astro.props;
-
-const pageTitle = currentPage === "home" ? title : `${title} · ${site.shortName}`;
-const ogImage = `${site.siteUrl}/og-default.jpg`;
+const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{pageTitle}</title>
-    <meta name="description" content={description} />
-    <link rel="canonical" href={site.siteUrl} />
+<BaseLayout
+  title="Selected work"
+  description="Client work with verified throughput, and concept projects labelled as concept work. No inflated numbers."
+  currentPage="work"
+>
+  <section class="pt-[clamp(40px,6vw,80px)]">
+    <div class="wrap">
+      <h1 class="display display-l">Selected work</h1>
+      <p class="mt-6 max-w-[62ch] font-light text-body">
+        Every entry is labelled. Client work carries verified numbers. Concept work carries none,
+        because there are none.
+      </p>
+    </div>
+  </section>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" cross
+  <section class="sec pt-[clamp(32px,4vw,56px)]">
+    <div class="wrap">
+      {
+        cases.map((entry) => (
+          <CaseCard entry={entry} href={`/work/${entry.slug}`} showBody={false} />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

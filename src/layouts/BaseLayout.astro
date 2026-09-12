@@ -1,41 +1,61 @@
 ---
-title: "Grid composition studies"
-type: concept
-client: "Concept project"
-year: "2025"
-discipline: "Feed design studies"
-tone: "ink"
-summary: "Two self-set exercises in making nine separate posts read as one coherent grid. No client, no brief, no audience. The constraint was only the composition."
-cover:
-  src: "/images/work/amerta/feed-grid.jpg"
-  alt: "Nine-post grid for a herbal skincare brand, mixing botanical imagery with product and lifestyle shots"
-deliverables:
-  - "Two nine-post grids composed as single surfaces"
-  - "Alternating visual weight so no two heavy frames touch"
-  - "A reading order that puts the strongest frame where the eye lands first"
-  - "One palette held across nine frames without repeating a layout"
-gallery:
-  - src: "/images/work/amerta/feed-grid.jpg"
-    alt: "Nine-post grid for a herbal skincare brand in earthy tones, alternating ingredient, product and lifestyle frames"
-    caption: "Herbal skincare: alternating ingredient, product and lifestyle frames so no two neighbours look alike"
-  - src: "/images/work/nature-tech/feed-grid.jpg"
-    alt: "Nine-post grid for an eco-friendly technology brand, mixing wooden accessories, nature scenes and statement posts"
-    caption: "Eco technology: statement posts placed on the diagonal so the eye travels across the grid"
-order: 4
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import { site } from "../data/site";
+
+interface Props {
+  title: string;
+  description?: string;
+  currentPage?: string;
+}
+
+const {
+  title,
+  description = "Short-form content operations for agencies and brands. Four client accounts, eight videos a day, published without missing a slot.",
+  currentPage = "",
+} = Astro.props;
+
+const pageTitle = currentPage === "home" ? title : `${title} · ${site.shortName}`;
+const ogImage = `${site.siteUrl}/og-default.jpg`;
 ---
 
-## What this is
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={site.siteUrl} />
 
-Two grid exercises I set myself, with no client and no brief. The only constraint was composition: could nine posts, made one at a time, still read as a single deliberate surface when placed together.
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Mrs+Saint+Delafield&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-Both are **concept work**. There is no account behind them and no results to report.
-
-## The problem with grids
-
-Most feeds are built one post at a time, then judged as a whole. The seams show: two product shots land next to each other, or three text posts stack in a column, and the surface reads as a pile rather than a layout.
-
-## What I practised
-
-- **Alternating weight.** No more than two heavy frames touching, so the eye gets somewhere to rest.
-- **Reading order.** Placing the strongest frame where a new visitor's eye lands first, not where it looked best in isolation.
-- **
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+  </head>
+  <body>
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-[13px] focus:font-semibold focus:uppercase focus:text-canvas"
+    >
+      Skip to content
+    </a>
+    <Navigation currentPage={currentPage} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -10,7 +10,8 @@
       "Shell(Select-String:*)",
       "Shell(Select-Object:*)",
       "Shell(python \"$COMMANDCODE_SCRATCHPAD/extract_pdf.py\")",
-      "Shell(python \"C:\\Users\\lenovo\\AppData\\Local\\Temp\\commandcode\\D--skill-coba-Website-Portofolio-VA\\c9de407b-391a-4f9d-a5fd-ecaf9bacb59e\\scratchpad\\extract_pdf.py\")"
+      "Shell(python \"C:\\Users\\lenovo\\AppData\\Local\\Temp\\commandcode\\D--skill-coba-Website-Portofolio-VA\\c9de407b-391a-4f9d-a5fd-ecaf9bacb59e\\scratchpad\\extract_pdf.py\")",
+      "powershell"
     ],
     "deny": [],
     "defaultMode": "default"

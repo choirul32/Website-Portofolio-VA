@@ -1,19 +1,30 @@
 ---
-title: "Ruang Seduh: local brand with an atmosphere problem"
-type: concept
-client: "Concept project"
-year: "2025"
-discipline: "Content system design"
-tone: "brown"
-summary: "A self-directed brief. A coffee shop that people like in person but that reads as empty online. The work was translating atmosphere into something a feed can carry."
-cover:
-  src: "/images/work/ruang-seduh/cover.jpg"
-  alt: "Interior of Ruang Seduh coffee shop with wooden tables, chairs and warm lighting"
-gallery:
-  - src: "/images/work/ruang-seduh/feed-grid.jpg"
-    alt: "Nine-post grid for Ruang Seduh mixing interior shots, latte art, brewing and menu graphics"
-    caption: "Place first, product second. The grid leads with the room, not the cup"
-  - src: "/images/work/ruang-seduh/pour-over.jpg"
-    alt: "Pour-over coffee setup with a glass carafe and dripper on a wooden table"
-    caption: "The craft pillar, shot on a phone with no lighting rig"
-  - src: "/images/work/ruang
+import { stats } from "../data/site";
+---
+
+<section class="proof" aria-labelledby="proof-heading">
+  <div class="wrap">
+    <div class="grid gap-2">
+      <span class="kick text-cream-55">Running today</span>
+      <span id="proof-heading" class="script !text-[clamp(22px,3vw,34px)] text-cream-90">
+        four accounts, every single day
+      </span>
+    </div>
+    <dl class="mt-9 grid grid-cols-2 gap-x-5 gap-y-7 md:grid-cols-4 md:gap-5">
+      {
+        stats.map((stat) => (
+          <div class="proof-cell">
+            <dt class="sr-only">{stat.label}</dt>
+            <dd class="m-0">
+              <span class="proof-n">{stat.value}</span>
+              <span class="mt-2 block text-[13px] font-medium">{stat.label}</span>
+              <span class="mt-[3px] block text-xs font-light leading-snug text-cream-70">
+                {stat.detail}
+              </span>
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>
