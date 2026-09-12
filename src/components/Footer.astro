@@ -1,0 +1,15 @@
+---
+import { site } from "../data/site";
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-cream-22 bg-brown text-canvas">
+  <div class="wrap flex flex-wrap items-baseline justify-between gap-x-7 gap-y-2.5 py-[22px]">
+    <span class="text-xs font-light text-cream-55">
+      &copy; {year} {site.name}
+    </span>
+    <span class="text-xs font-light text-cream-55">
+      Content management · {site.location}
+    </span>
+  </div>
+</footer>

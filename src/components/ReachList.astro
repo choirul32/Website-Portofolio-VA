@@ -1,0 +1,48 @@
+---
+import { site } from "../data/site";
+---
+
+<div class="border-t border-cream-22">
+  <a class="reach-link" href={`mailto:${site.email}`}>
+    <span>
+      <span class="reach-k">Email</span>
+      <span class="reach-v">{site.email}</span>
+    </span>
+    <span aria-hidden="true">↗</span>
+  </a>
+
+  <a class="reach-link" href={site.whatsappHref}>
+    <span>
+      <span class="reach-k">Phone / WhatsApp</span>
+      <span class="reach-v">{site.whatsapp}</span>
+    </span>
+    <span aria-hidden="true">↗</span>
+  </a>
+
+  <a class="reach-link" href={site.instagramHref}>
+    <span>
+      <span class="reach-k">Instagram</span>
+      <span class="reach-v">{site.instagram}</span>
+    </span>
+    <span aria-hidden="true">↗</span>
+  </a>
+
+  {
+    site.upworkHref && (
+      <a class="reach-link" href={site.upworkHref}>
+        <span>
+          <span class="reach-k">Upwork</span>
+          <span class="reach-v">Profile</span>
+        </span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    )
+  }
+
+  <div class="flex flex-wrap items-baseline justify-between gap-x-[18px] py-4">
+    <span>
+      <span class="reach-k">Working hours</span>
+      <span class="reach-v">UTC+7 · overlap held for US and EU</span>
+    </span>
+  </div>
+</div>

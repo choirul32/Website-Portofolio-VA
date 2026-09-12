@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import { site } from "../data/site";
+
+interface Props {
+  title: string;
+  description?: string;
+  currentPage?: string;
+}
+
+const {
+  title,
+  description = "Short-form content operations for agencies and brands. Four client accounts, eight videos a day, published without missing a slot.",
+  currentPage = "",
+} = Astro.props;
+
+const pageTitle = currentPage === "home" ? title : `${title} · ${site.shortName}`;
+const ogImage = `${site.siteUrl}/og-default.jpg`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={site.siteUrl} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" cross

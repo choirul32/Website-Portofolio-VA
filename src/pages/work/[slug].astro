@@ -1,0 +1,74 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CaseCard from "../../components/CaseCard.astro";
+
+export async function getStaticPaths() {
+  const cases = await getCollection("work");
+  return cases.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const gallery = entry.data.gallery ?? [];
+---
+
+<BaseLayout
+  title={entry.data.title}
+  description={entry.data.summary}
+  currentPage="work"
+>
+  <div class="wrap pt-[clamp(32px,4vw,56px)]">
+    <a
+      href="/work"
+      class="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.13em] text-muted transition-colors hover:text-ink"
+    >
+      <span aria-hidden="true">←</span> All work
+    </a>
+  </div>
+
+  <div class="wrap pt-6">
+    <CaseCard entry={entry} heading="h1" />
+  </div>
+
+  {
+    gallery.length > 0 && (
+      <section class="sec pt-0">
+        <div class="wrap">
+          <h2 class="kick mb-6 text-muted">Frames</h2>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+            {gallery.map((shot) => (
+              <figure class="m-0">
+                <div class="aspect-[4/3] overflow-hidden rounded-xs bg-line/40">
+                  <img
+                    src={shot.src}
+                    alt={shot.alt}
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                {shot.caption && (
+                  <figcaption class="mt-3 border-t border-line pt-3 text-[13px] font-light text-muted">
+                    {shot.caption}
+                  </figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="prose-body">
+        <Content />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

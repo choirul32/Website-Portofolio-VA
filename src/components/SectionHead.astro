@@ -1,0 +1,13 @@
+---
+interface Props {
+  word: string;
+  id?: string;
+  class?: string;
+}
+
+const { word, id, class: className = "" } = Astro.props;
+---
+
+<h2 id={id} class:list={["display display-l mb-[clamp(20px,3vw,36px)]", className]}>
+  {word}
+</h2>

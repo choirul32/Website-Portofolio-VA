@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(dir:*)",
+      "Shell(pdftotext:*)",
+      "Shell(more:*)",
+      "Shell(findstr:*)",
+      "Shell(where:*)",
+      "Shell(npx astro check 2 >& 1)",
+      "Shell(Select-String:*)",
+      "Shell(Select-Object:*)",
+      "Shell(python \"$COMMANDCODE_SCRATCHPAD/extract_pdf.py\")",
+      "Shell(python \"C:\\Users\\lenovo\\AppData\\Local\\Temp\\commandcode\\D--skill-coba-Website-Portofolio-VA\\c9de407b-391a-4f9d-a5fd-ecaf9bacb59e\\scratchpad\\extract_pdf.py\")"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

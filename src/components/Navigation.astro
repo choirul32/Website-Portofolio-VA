@@ -1,0 +1,82 @@
+---
+import { site } from "../data/site";
+
+interface Props {
+  currentPage: string;
+}
+
+const { currentPage } = Astro.props;
+
+const navLinks = [
+  { href: "/#about", label: "About", id: "about" },
+  { href: "/#services", label: "Services", id: "services" },
+  { href: "/work", label: "Work", id: "work" },
+  { href: "/#planning", label: "Planning", id: "planning" },
+  { href: "/#achievement", label: "Achievement", id: "achievement" },
+  { href: "/contact", label: "Contact", id: "contact" },
+];
+---
+
+<header
+  class="sticky top-0 z-50 border-b border-line bg-canvas/95 backdrop-blur-[10px]"
+>
+  <div class="wrap flex min-h-[72px] items-center justify-between gap-6">
+    <a
+      href="/"
+      class="font-serif text-[22px] font-semibold text-ink transition-opacity hover:opacity-70"
+    >
+      {site.shortName}
+    </a>
+
+    <nav aria-label="Primary" class="hidden lg:block">
+      <ul class="flex items-center gap-[30px]">
+        {
+          navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                aria-current={currentPage === link.id ? "page" : undefined}
+                class:list={[
+                  "text-xs font-medium uppercase tracking-[0.13em] transition-colors",
+                  currentPage === link.id ? "text-ink" : "text-muted hover:text-ink",
+                ]}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <a
+      href="/contact"
+      class="btn btn-outline min-h-[44px] px-5 text-[11px]"
+    >
+      Let's work
+    </a>
+  </div>
+
+  <nav aria-label="Primary mobile" class="border-t border-line lg:hidden">
+    <div class="wrap">
+      <ul class="flex flex-wrap gap-x-5 gap-y-1 py-2">
+        {
+          navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                aria-current={currentPage === link.id ? "page" : undefined}
+                class:list={[
+                  "inline-block py-1.5 text-[11px] font-medium uppercase tracking-[0.13em] transition-colors",
+                  currentPage === link.id ? "text-ink" : "text-muted hover:text-ink",
+                ]}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </nav>
+</header>
