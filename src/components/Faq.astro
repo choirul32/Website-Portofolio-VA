@@ -1,0 +1,49 @@
+---
+import SectionHead from "./SectionHead.astro";
+
+const faqs = [
+  {
+    q: "I don't have footage. Can we still start?",
+    a: "Yes. I work from product photos, old posts, or stock — and give you a simple shoot list so your next batch of raw footage is ready to cut.",
+  },
+  {
+    q: "How many revisions do I get?",
+    a: "Two rounds per batch are included in every package. Most clients approve on the first — hooks and voice are agreed before I cut.",
+  },
+  {
+    q: "How fast can we start?",
+    a: "Onboarding takes 2–3 days: one call, brand voice notes, account access. First posts go live within the first week.",
+  },
+  {
+    q: "Who owns the content?",
+    a: "You do — every file, caption, and template. If we part ways, you get the full library plus a handover doc.",
+  },
+  {
+    q: "Do you use AI?",
+    a: "For drafts, yes — listings, captions, and reply first versions. Everything customer-facing passes my human check before it goes live.",
+  },
+  {
+    q: "Can I cancel anytime?",
+    a: "Monthly packages, no lock-in. Give 14 days notice and I'll finish the current queue plus hand everything over.",
+  },
+];
+---
+
+<section class="sec pt-0" id="faq">
+  <div class="wrap">
+    <SectionHead word="Questions" />
+    <div class="mt-9 grid gap-4 md:grid-cols-2 md:gap-5">
+      {
+        faqs.map((faq) => (
+          <details class="group rounded-case border border-line bg-canvas p-7">
+            <summary class="cursor-pointer list-none font-sans text-[17px] font-bold leading-snug text-ink outline-none focus-visible:ring-2 focus-visible:ring-olive-2 [&::-webkit-details-marker]:hidden">
+              <span class="mr-2 inline-block text-olive transition-transform group-open:rotate-45">+</span>
+              {faq.q}
+            </summary>
+            <p class="mt-4 text-[15px] font-light leading-relaxed text-body">{faq.a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>

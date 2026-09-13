@@ -9,6 +9,7 @@ import PhoneMockup from "../components/PhoneMockup.astro";
 import Pricing from "../components/Pricing.astro";
 import Testimonials from "../components/Testimonials.astro";
 import AiWorkflow from "../components/AiWorkflow.astro";
+import Faq from "../components/Faq.astro";
 import { getCollection } from "astro:content";
 import { site, services, process, achievements, upworkProfileUrl } from "../data/site";
 
@@ -217,6 +218,8 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
   <Testimonials />
 
   <AiWorkflow />
+
+  <Faq />
 
   <section class="sec pt-0" id="achievement">
     <div class="wrap">
