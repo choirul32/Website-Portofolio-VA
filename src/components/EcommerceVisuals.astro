@@ -1,0 +1,83 @@
+---
+const flow = [
+  { n: "1", t: "New order", d: "Checked every morning, tracking updated" },
+  { n: "2", t: "Pack & ship", d: "Packed list ready, fulfilled < 24h" },
+  { n: "3", t: "Inbox zero", d: "Replies out within 12 hours" },
+  { n: "4", t: "Weekly report", d: "Orders, top SKUs, response time" },
+];
+
+const inboxSamples = [
+  { tag: "Shipping", text: "Hi {name}, your order #{order} shipped today — track it here: {link}." },
+  { tag: "Returns", text: "Hi {name}, sorry it wasn't right. Here's your return label — refund lands within 3 days of arrival." },
+  { tag: "Damaged", text: "Hi {name}, that's on us. A replacement ships today, no need to return the damaged one." },
+];
+
+const listingChecks = [
+  "Clear keyword title",
+  "Same framing, same light",
+  "Variants that make sense",
+  "Tags for filtering",
+  "SEO description, buyer-first",
+];
+---
+
+<div class="grid gap-6 lg:grid-cols-2 lg:gap-7">
+  <div class="rounded-case bg-ink p-8 text-canvas">
+    <p class="kick text-cream-55">Daily flow</p>
+    <h3 class="serif mt-2 text-[clamp(24px,3vw,34px)] italic text-cream-90">
+      Order to inbox, owned end to end.
+    </h3>
+    <ol class="mt-6 space-y-0">
+      {
+        flow.map((step, i) => (
+          <li class="flex gap-4 border-cream-13 py-4 [&:not(:last-child)]:border-b">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-olive font-display text-lg text-canvas">
+              {step.n}
+            </span>
+            <span>
+              <span class="block font-sans text-base font-bold">{step.t}</span>
+              <span class="mt-0.5 block text-sm font-light text-cream-70">{step.d}</span>
+            </span>
+            {i < flow.length - 1 && <span aria-hidden="true" />}
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+
+  <div class="flex flex-col gap-6">
+    <div class="rounded-case border border-line bg-canvas p-8">
+      <p class="kick text-muted">Inbox templates</p>
+      <h3 class="mt-2 font-sans text-xl font-bold text-ink">90% of messages, pre-answered.</h3>
+      <div class="mt-5 space-y-3">
+        {
+          inboxSamples.map((sample) => (
+            <div class="rounded-[12px] border border-line bg-canvas p-4">
+              <span class="inline-block rounded-full bg-olive/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-olive">
+                {sample.tag}
+              </span>
+              <p class="mt-2 text-sm font-light leading-relaxed text-body">{sample.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="rounded-case bg-olive p-8 text-canvas">
+      <p class="kick text-cream-55">Listing checklist</p>
+      <h3 class="mt-2 font-sans text-xl font-bold">Every SKU, same standard.</h3>
+      <ul class="mt-5 space-y-2.5">
+        {
+          listingChecks.map((check) => (
+            <li class="flex items-center gap-3 text-[15px] font-light">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-canvas text-sm font-bold text-olive">
+                ✓
+              </span>
+              {check}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>

@@ -6,13 +6,6 @@ year: "2026"
 discipline: "E-commerce operations"
 tone: "ink"
 summary: "Sample project: the daily operating flow of a small Shopify store — product listings, inventory sync, order processing, and a customer inbox with reply templates. Concept work, no client results claimed."
-cover:
-  src: "/images/work/glowyn/product-jar.jpg"
-  alt: "E-commerce product photo: skincare jar styled for a store listing"
-gallery:
-  - src: "/images/work/glowyn/feed-grid.jpg"
-    alt: "Product catalog grid planned as one consistent surface"
-    caption: "Catalog consistency: same framing, same light, every SKU"
 order: 5
 deliverables:
   - "Product listing SOP: title, SKU, variants, tags, and SEO description template"
