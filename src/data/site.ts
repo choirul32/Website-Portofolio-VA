@@ -36,6 +36,55 @@ export const process = [
   { step: "Report", detail: "What landed, what did not, and what the next batch leans into.", icon: "report" },
 ];
 
+export const waBase = "https://wa.me/6282226551246";
+
+export const packages = [
+  {
+    name: "Starter",
+    price: "$149",
+    per: "/month",
+    desc: "A consistent presence without lifting a finger.",
+    featured: false,
+    features: [
+      "12 posts / month (3x per week)",
+      "1 account — TikTok or Instagram",
+      "Hooks, captions & hashtags in your voice",
+      "Monthly performance note",
+    ],
+    cta: "https://wa.me/6282226551246?text=Hi%20Choirul%2C%20I%27m%20interested%20in%20the%20Starter%20package%20(%24149%2Fmo).",
+  },
+  {
+    name: "Growth",
+    price: "$349",
+    per: "/month",
+    desc: "Daily posting that compounds. Most clients start here.",
+    featured: true,
+    features: [
+      "30 posts / month (daily)",
+      "Up to 2 accounts",
+      "Everything in Starter",
+      "Comments & DMs answered within 12 hours",
+      "Biweekly report — what to post more of",
+    ],
+    cta: "https://wa.me/6282226551246?text=Hi%20Choirul%2C%20I%27m%20interested%20in%20the%20Growth%20package%20(%24349%2Fmo).",
+  },
+  {
+    name: "Scale",
+    price: "$749",
+    per: "/month",
+    desc: "Your whole short-form operation, handled.",
+    featured: false,
+    features: [
+      "Up to 4 accounts, daily posting",
+      "Everything in Growth",
+      "Monthly 30-min strategy call",
+      "Priority WhatsApp line",
+      "Quarterly content pillar refresh",
+    ],
+    cta: "https://wa.me/6282226551246?text=Hi%20Choirul%2C%20I%27m%20interested%20in%20the%20Scale%20package%20(%24749%2Fmo).",
+  },
+];
+
 export const achievements = [
   { title: "Social Media Marketing", issuer: "Semrush" },
   { title: "Social Media Marketing", issuer: "Meta" },

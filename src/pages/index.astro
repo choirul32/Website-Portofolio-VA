@@ -6,6 +6,7 @@ import SectionHead from "../components/SectionHead.astro";
 import ServiceIcon from "../components/ServiceIcon.astro";
 import CaseCard from "../components/CaseCard.astro";
 import PhoneMockup from "../components/PhoneMockup.astro";
+import Pricing from "../components/Pricing.astro";
 import { getCollection } from "astro:content";
 import { site, services, process, achievements } from "../data/site";
 
@@ -27,8 +28,18 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
           Helping agencies and brands keep a publishing calendar that never goes quiet.
         </p>
       </div>
-      <h1 class="display display-xl mt-[clamp(28px,5vw,56px)]">Portfolio</h1>
-      <hr class="rule" />
+      <h1 class="display display-l mt-[clamp(28px,5vw,56px)]">Daily content, handled.</h1>
+      <p class="lede mt-5 max-w-[52ch]">
+        I run TikTok &amp; Instagram publishing for busy brands — hooks, captions, and posting
+        every day, in your voice. You send raw footage, your calendar stays full.
+      </p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a class="btn btn-solid" href="#pricing">See packages</a>
+        <a class="btn btn-outline" href={site.whatsappHref} target="_blank" rel="noreferrer">
+          Chat on WhatsApp
+        </a>
+      </div>
+      <hr class="rule mt-[clamp(28px,5vw,56px)]" />
       <div class="flex flex-wrap items-baseline justify-between gap-x-7 gap-y-3 py-[26px]">
         <p
           class="max-w-[18ch] font-sans text-[clamp(20px,4vw,46px)] font-bold uppercase leading-[1.05] tracking-[-0.01em] text-body"
@@ -190,6 +201,8 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
     </div>
   </section>
 
+  <Pricing />
+
   <section class="sec pt-0" id="achievement">
     <div class="wrap">
       <SectionHead word="My achievement" />
@@ -209,16 +222,18 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
   <section class="bg-brown pt-[clamp(56px,8vw,110px)] text-canvas" id="contact">
     <div class="wrap">
       <p class="text-[clamp(22px,3vw,38px)] font-normal text-cream-90">{site.name}</p>
-      <h2 class="display display-xl my-[clamp(10px,2vw,22px)] text-canvas">Thank you</h2>
+      <h2 class="display display-l my-[clamp(10px,2vw,22px)] text-canvas">Start with a free sample</h2>
       <div class="split-even">
         <div>
           <p class="max-w-[48ch] text-base font-light text-cream-70">
-            Send one long-form asset and your publishing calendar. I return a sample batch with
-            hooks and captions, so you can judge the work before committing to anything.
+            Send one long-form video. I return a ready-to-post batch — hooks, cuts, captions —
+            free. Keep it if you love it, ignore me if you don't.
           </p>
           <div class="mt-[26px] flex flex-wrap gap-3">
-            <a class="btn btn-cream" href={`mailto:${site.email}`}>Email the asset</a>
-            <a class="btn btn-ghost-light" href={site.whatsappHref}>WhatsApp</a>
+            <a class="btn btn-cream" href={site.whatsappHref} target="_blank" rel="noreferrer">
+              Get my free sample
+            </a>
+            <a class="btn btn-ghost-light" href={`mailto:${site.email}`}>Email instead</a>
           </div>
         </div>
         <ReachList />
