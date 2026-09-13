@@ -30,10 +30,10 @@ export const services = [
 ];
 
 export const process = [
-  { step: "Intake", detail: "Raw footage and your calendar arrive. I map what can be cut from it." },
-  { step: "Build", detail: "Hooks, cutting, captions, and exports sized per platform." },
-  { step: "Publish", detail: "Loaded into the queue and posted on schedule, every slot filled." },
-  { step: "Report", detail: "What landed, what did not, and what the next batch leans into." },
+  { step: "Intake", detail: "Raw footage and your calendar arrive. I map what can be cut from it.", icon: "inbox" },
+  { step: "Build", detail: "Hooks, cutting, captions, and exports sized per platform.", icon: "scissors" },
+  { step: "Publish", detail: "Loaded into the queue and posted on schedule, every slot filled.", icon: "rocket" },
+  { step: "Report", detail: "What landed, what did not, and what the next batch leans into.", icon: "report" },
 ];
 
 export const achievements = [

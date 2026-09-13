@@ -177,6 +177,9 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
           {
             process.map((item) => (
               <div class="item">
+                <span class="service-icon">
+                  <ServiceIcon name={item.icon} />
+                </span>
                 <h3>{item.step}</h3>
                 <p>{item.detail}</p>
               </div>
