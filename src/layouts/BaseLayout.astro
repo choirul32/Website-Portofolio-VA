@@ -12,12 +12,25 @@ interface Props {
 
 const {
   title,
-  description = "Short-form content operations for agencies and brands. Four client accounts, eight videos a day, published without missing a slot.",
+  description = "TikTok & Instagram publishing for busy brands — hooks, captions, and daily posting in your voice. Packages from $79/mo, free sample to start.",
   currentPage = "",
 } = Astro.props;
 
 const pageTitle = currentPage === "home" ? title : `${title} · ${site.shortName}`;
+const canonicalUrl = currentPage === "home" ? site.siteUrl : `${site.siteUrl}${Astro.url.pathname}`;
 const ogImage = `${site.siteUrl}/og-default.jpg`;
+
+const personSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: `${site.name} — ${site.role}`,
+  description,
+  url: site.siteUrl,
+  email: site.email,
+  telephone: site.whatsapp,
+  address: { "@type": "PostalAddress", addressCountry: "ID" },
+  priceRange: "$79-$379",
+});
 ---
 
 <!doctype html>
@@ -27,7 +40,15 @@ const ogImage = `${site.siteUrl}/og-default.jpg`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={site.siteUrl} />
+    <meta
+      name="keywords"
+      content="virtual assistant, content VA, TikTok VA, Instagram manager, short-form video editor, social media VA, ecommerce VA, Upwork freelancer Indonesia"
+    />
+    <meta name="author" content={site.name} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#293A13" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,10 +61,14 @@ const ogImage = `${site.siteUrl}/og-default.jpg`;
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={site.shortName} />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={personSchema} />
   </head>
   <body>
     <a
