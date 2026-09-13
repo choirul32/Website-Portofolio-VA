@@ -21,12 +21,12 @@ export const stats = [
 ];
 
 export const services = [
-  { title: "Content Creation", detail: "Posts, stories, reels, cut and captioned per platform" },
-  { title: "Copywriting", detail: "Captions and video scripts written in your voice" },
-  { title: "Content Calendar", detail: "Planning and scheduling so every slot is filled" },
-  { title: "Community Management", detail: "Comments and DMs handled inside your response window" },
-  { title: "Publishing Operations", detail: "Daily posting across every account you run" },
-  { title: "Analytics & Reporting", detail: "What landed, what did not, and what changes next month" },
+  { title: "Content Creation", detail: "Posts, stories, reels, cut and captioned per platform", icon: "video" },
+  { title: "Copywriting", detail: "Captions and video scripts written in your voice", icon: "pen" },
+  { title: "Content Calendar", detail: "Planning and scheduling so every slot is filled", icon: "calendar" },
+  { title: "Community Management", detail: "Comments and DMs handled inside your response window", icon: "chat" },
+  { title: "Publishing Operations", detail: "Daily posting across every account you run", icon: "send" },
+  { title: "Analytics & Reporting", detail: "What landed, what did not, and what changes next month", icon: "chart" },
 ];
 
 export const process = [

@@ -256,6 +256,25 @@
     @apply mt-1.5 text-[15px] text-muted;
   }
 
+  /* ---------- service icons ---------- */
+  .service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 18px;
+    border-radius: 9999px;
+    border: 1px solid theme("colors.line");
+    background: rgba(41, 58, 19, 0.07);
+    color: theme("colors.olive");
+  }
+
+  .service-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
   /* ---------- achievement rows ---------- */
   .ach-item {
     @apply flex flex-wrap items-baseline justify-between gap-x-3.5 gap-y-1.5 border-b border-line py-[15px];
