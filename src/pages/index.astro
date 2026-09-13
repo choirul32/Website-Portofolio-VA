@@ -8,7 +8,24 @@ import { getCollection } from "astro:content";
 import { site, services, process, achievements } from "../data/site";
 
 const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data.order);
-const featured = cases.slice(0, 2);
+
+const feedGrids = [
+  {
+    src: "/images/work/glowyn/feed-grid.jpg",
+    alt: "Nine-post launch grid for Glowyn skincare, alternating product shots with ingredient and routine graphics",
+    caption: "Glowyn — launch grid planned as one composition",
+  },
+  {
+    src: "/images/work/ruang-seduh/feed-grid.jpg",
+    alt: "Nine-post grid for Ruang Seduh coffee shop mixing interior shots, latte art, brewing and menu graphics",
+    caption: "Ruang Seduh — place first, product second",
+  },
+  {
+    src: "/images/work/amerta/feed-grid.jpg",
+    alt: "Nine-post grid for a herbal skincare brand in earthy tones",
+    caption: "Grid study — one palette across nine frames",
+  },
+];
 ---
 
 <BaseLayout
@@ -97,17 +114,46 @@ const featured = cases.slice(0, 2);
     </div>
   </section>
 
+  <section class="sec pt-0" id="grids">
+    <div class="wrap">
+      <SectionHead word="The grids" />
+      <p class="lede max-w-[62ch]">
+        Nine posts, planned as one surface. This is what the work looks like before a single
+        caption is read.
+      </p>
+      <div class="mt-9 grid gap-6 md:grid-cols-3 md:gap-5">
+        {
+          feedGrids.map((grid) => (
+            <figure class="m-0 overflow-hidden rounded-case bg-line/40">
+              <img
+                src={grid.src}
+                alt={grid.alt}
+                loading="lazy"
+                decoding="async"
+                class="h-auto w-full object-cover"
+              />
+              <figcaption class="border-t border-line bg-canvas px-5 py-3 text-[13px] font-light text-muted">
+                {grid.caption}
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
   <section class="sec pt-0" id="work">
     <div class="wrap">
       <SectionHead word="Selected work" />
       {
-        featured.map((entry) => (
-          <CaseCard entry={entry} href={`/work/${entry.slug}`} showBody={false} />
+        cases.map((entry, i) => (
+          <CaseCard
+            entry={entry}
+            href={`/work/${entry.slug}`}
+            showBody={i === 0}
+          />
         ))
       }
-      <div class="mt-9">
-        <a class="btn btn-outline" href="/work">All case studies</a>
-      </div>
     </div>
   </section>
 
