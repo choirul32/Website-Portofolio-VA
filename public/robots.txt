@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://choirulanwar.com/sitemap-index.xml
+Sitemap: https://choirulanwar.com/sitemap.xml
