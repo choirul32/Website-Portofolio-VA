@@ -4,28 +4,11 @@ import ProofStats from "../components/ProofStats.astro";
 import ReachList from "../components/ReachList.astro";
 import SectionHead from "../components/SectionHead.astro";
 import CaseCard from "../components/CaseCard.astro";
+import PhoneMockup from "../components/PhoneMockup.astro";
 import { getCollection } from "astro:content";
 import { site, services, process, achievements } from "../data/site";
 
 const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data.order);
-
-const feedGrids = [
-  {
-    src: "/images/work/glowyn/feed-grid.jpg",
-    alt: "Nine-post launch grid for Glowyn skincare, alternating product shots with ingredient and routine graphics",
-    caption: "Glowyn — launch grid planned as one composition",
-  },
-  {
-    src: "/images/work/ruang-seduh/feed-grid.jpg",
-    alt: "Nine-post grid for Ruang Seduh coffee shop mixing interior shots, latte art, brewing and menu graphics",
-    caption: "Ruang Seduh — place first, product second",
-  },
-  {
-    src: "/images/work/amerta/feed-grid.jpg",
-    alt: "Nine-post grid for a herbal skincare brand in earthy tones",
-    caption: "Grid study — one palette across nine frames",
-  },
-];
 ---
 
 <BaseLayout
@@ -116,28 +99,50 @@ const feedGrids = [
 
   <section class="sec pt-0" id="grids">
     <div class="wrap">
-      <SectionHead word="The grids" />
+      <SectionHead word="Feed previews" />
       <p class="lede max-w-[62ch]">
-        Nine posts, planned as one surface. This is what the work looks like before a single
-        caption is read.
+        How the grid reads on a phone. Concept previews — handles and numbers blanked on
+        purpose, the system is what is real.
       </p>
-      <div class="mt-9 grid gap-6 md:grid-cols-3 md:gap-5">
-        {
-          feedGrids.map((grid) => (
-            <figure class="m-0 overflow-hidden rounded-case bg-line/40">
-              <img
-                src={grid.src}
-                alt={grid.alt}
-                loading="lazy"
-                decoding="async"
-                class="h-auto w-full object-cover"
-              />
-              <figcaption class="border-t border-line bg-canvas px-5 py-3 text-[13px] font-light text-muted">
-                {grid.caption}
-              </figcaption>
-            </figure>
-          ))
-        }
+      <div class="mt-9 grid gap-8 md:grid-cols-2 md:gap-6 lg:gap-10">
+        <PhoneMockup
+          username="ruang.seduh"
+          displayName="RUANG SEDUH"
+          bio="Teman di setiap seduhan."
+          highlights={["Menu", "Coffee", "Ambience", "Events"]}
+          avatarLetter="R"
+          caption="Ruang Seduh — warm minimal feed: interior, promo, product, quote, craft."
+          tiles={[
+            { src: "/images/work/ruang-seduh/cover.jpg", alt: "Ruang Seduh cafe interior", pos: "center 30%" },
+            { src: "/images/work/ruang-seduh/feed-grid.jpg", alt: "Ruang Seduh nine-post grid", pos: "center 20%" },
+            { src: "/images/work/ruang-seduh/latte.jpg", alt: "Ruang Seduh latte art", pos: "center" },
+            { src: "/images/work/ruang-seduh/pour-over.jpg", alt: "Ruang Seduh pour-over brewing", pos: "center" },
+            { src: "/images/work/ruang-seduh/cover.jpg", alt: "Ruang Seduh cafe interior", pos: "center 60%" },
+            { src: "/images/work/ruang-seduh/latte.jpg", alt: "Ruang Seduh latte art", pos: "center 30%" },
+            { src: "/images/work/ruang-seduh/pour-over.jpg", alt: "Ruang Seduh pour-over brewing", pos: "center 70%" },
+            { src: "/images/work/ruang-seduh/feed-grid.jpg", alt: "Ruang Seduh nine-post grid", pos: "center 60%" },
+            { src: "/images/work/ruang-seduh/cover.jpg", alt: "Ruang Seduh cafe interior", pos: "center 80%" },
+          ]}
+        />
+        <PhoneMockup
+          username="glowyn.skincare"
+          displayName="GLOWYN Skincare"
+          bio="Skincare that helps you glow, naturally."
+          highlights={["Ingredients", "Routine", "Reviews", "Glow Tips"]}
+          avatarLetter="G"
+          caption="Glowyn — sage-green system: education, routine, product, proof."
+          tiles={[
+            { src: "/images/work/glowyn/feed-grid.jpg", alt: "Glowyn nine-post launch grid", pos: "center 20%" },
+            { src: "/images/work/glowyn/cover.jpg", alt: "Glowyn skincare products", pos: "center" },
+            { src: "/images/work/glowyn/product-jar.jpg", alt: "Glowyn green tea moisturiser jar", pos: "center" },
+            { src: "/images/work/glowyn/brand-graphic.jpg", alt: "Glowyn brand statement graphic", pos: "center" },
+            { src: "/images/work/glowyn/feed-grid.jpg", alt: "Glowyn nine-post launch grid", pos: "center 50%" },
+            { src: "/images/work/glowyn/product-jar.jpg", alt: "Glowyn green tea moisturiser jar", pos: "center 30%" },
+            { src: "/images/work/glowyn/cover.jpg", alt: "Glowyn skincare products", pos: "center 70%" },
+            { src: "/images/work/glowyn/brand-graphic.jpg", alt: "Glowyn brand statement graphic", pos: "center 30%" },
+            { src: "/images/work/glowyn/feed-grid.jpg", alt: "Glowyn nine-post launch grid", pos: "center 80%" },
+          ]}
+        />
       </div>
     </div>
   </section>
