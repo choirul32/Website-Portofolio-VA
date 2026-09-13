@@ -38,6 +38,34 @@ export const process = [
 
 export const waBase = "https://wa.me/6282226551246";
 
+// TODO: ganti dengan URL profil Upwork-mu, mis. "https://www.upwork.com/freelancers/~01abc...".
+// Tombol "Hire me on Upwork" di hero + kontak otomatis muncul setelah ini diisi.
+export const upworkProfileUrl = "";
+
+export const testimonials = [
+  {
+    quote:
+      "Choirul kept our four accounts posting every single day for three months. The queue just runs — I stopped thinking about content.",
+    name: "Agency Owner",
+    detail: "Content agency, US · via Upwork",
+    sample: true,
+  },
+  {
+    quote:
+      "Hooks and captions sound like us. First VA who didn't need rewriting on every single post.",
+    name: "Skincare Brand Founder",
+    detail: "E-commerce brand · sample quote",
+    sample: true,
+  },
+];
+
+export const aiWorkflow = [
+  { title: "Prompt library", detail: "One library per brand voice — hooks, captions, and replies drafted in your tone, not generic AI speak.", icon: "pen" },
+  { title: "Draft in minutes", detail: "AI writes the first version of listings, captions, and inbox replies. I refine, fact-check, and match your voice.", icon: "send" },
+  { title: "Queue automation", detail: "Scheduling and order tracking run on automation (Zapier/Make + Sheets) so nothing depends on memory.", icon: "calendar" },
+  { title: "Human check", detail: "Nothing customer-facing goes live unchecked — every AI output passes a human read before publish.", icon: "chart" },
+];
+
 export const packages = [
   {
     name: "Starter",

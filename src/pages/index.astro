@@ -7,8 +7,10 @@ import ServiceIcon from "../components/ServiceIcon.astro";
 import CaseCard from "../components/CaseCard.astro";
 import PhoneMockup from "../components/PhoneMockup.astro";
 import Pricing from "../components/Pricing.astro";
+import Testimonials from "../components/Testimonials.astro";
+import AiWorkflow from "../components/AiWorkflow.astro";
 import { getCollection } from "astro:content";
-import { site, services, process, achievements } from "../data/site";
+import { site, services, process, achievements, upworkProfileUrl } from "../data/site";
 
 const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data.order);
 ---
@@ -36,9 +38,17 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
       </p>
       <div class="mt-7 flex flex-wrap gap-3">
         <a class="btn btn-solid" href="#pricing">See packages</a>
-        <a class="btn btn-outline" href={site.whatsappHref} target="_blank" rel="noreferrer">
-          Chat on WhatsApp
-        </a>
+        {
+          upworkProfileUrl ? (
+            <a class="btn btn-outline" href={upworkProfileUrl} target="_blank" rel="noreferrer">
+              Hire me on Upwork
+            </a>
+          ) : (
+            <a class="btn btn-outline" href={site.whatsappHref} target="_blank" rel="noreferrer">
+              Chat on WhatsApp
+            </a>
+          )
+        }
       </div>
       <hr class="rule mt-[clamp(28px,5vw,56px)]" />
       <div class="flex flex-wrap items-baseline justify-between gap-x-7 gap-y-3 py-[26px]">
@@ -203,6 +213,10 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
   </section>
 
   <Pricing />
+
+  <Testimonials />
+
+  <AiWorkflow />
 
   <section class="sec pt-0" id="achievement">
     <div class="wrap">

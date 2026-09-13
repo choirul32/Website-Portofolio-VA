@@ -1,0 +1,30 @@
+---
+import SectionHead from "./SectionHead.astro";
+import ServiceIcon from "./ServiceIcon.astro";
+import { aiWorkflow } from "../data/site";
+---
+
+<section class="sec pt-0" id="ai-workflow">
+  <div class="wrap">
+    <SectionHead word="AI-assisted" />
+    <div class="split">
+      <p class="lede">
+        AI drafts, automation moves, I check. You get agency speed at VA rates — with a human
+        accountable for everything that goes live.
+      </p>
+      <div class="item-grid">
+        {
+          aiWorkflow.map((item) => (
+            <div class="item">
+              <span class="service-icon">
+                <ServiceIcon name={item.icon} />
+              </span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
