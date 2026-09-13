@@ -1,11 +1,11 @@
 ---
-title: "Ruang Seduh: local brand with an atmosphere problem"
+title: "Ruang Seduh: content system for a coffee shop"
 type: concept
 client: "Concept project"
 year: "2025"
-discipline: "Content system design"
+discipline: "Social media management"
 tone: "brown"
-summary: "A self-directed brief. A coffee shop that people like in person but that reads as empty online. The work was translating atmosphere into something a feed can carry."
+summary: "Sample project: planning, creating, and managing Instagram Feed & Reels for a cozy coffee shop — menu highlights, coffee education, ambience, and community. Concept work, no client results claimed."
 cover:
   src: "/images/work/ruang-seduh/cover.jpg"
   alt: "Interior of Ruang Seduh coffee shop with wooden tables, chairs and warm lighting"
@@ -21,31 +21,51 @@ gallery:
     caption: "Product shot used as support, never as the lead"
 order: 3
 deliverables:
-  - "Content pillars built around place, not product"
-  - "A recurring series format the staff could shoot without a photographer"
-  - "Caption voice guide in Indonesian and English"
-  - "Monthly posting rhythm sized to a two-person team"
+  - "Content planning & strategy for Instagram Feed & Reels"
+  - "Content creation: photos, graphics, and 9-post grid composed as one surface"
+  - "Copywriting & caption writing in Indonesian and English"
+  - "Hashtag research & optimization"
+  - "Community management flow: comments and DMs inside a response window"
+  - "Monthly posting rhythm + performance reporting template"
+tools:
+  - "Canva"
+  - "Photoshop"
+  - "ChatGPT"
+  - "Google Sheets"
 ---
 
-## The problem I set myself
+## The project
 
-Coffee shops have an easy content trap: photograph the latte, post the latte, repeat. It fills a grid and says nothing about why anyone should come. The brief I wrote was a shop with a real atmosphere and a two-person team that could not produce a daily shoot.
+Sample project: building brand awareness and engagement for a cozy coffee shop positioned as a place to pause and connect — not just coffee. **This is a concept project. No client, no account, no numbers.**
 
-This is a **concept project**. No client, no account, no numbers.
+## Target · Platform · Goals
 
-## Pillars
+- **Target:** Coffee lovers, young adults 18–35, who enjoy cozy atmosphere and meaningful experiences.
+- **Platform:** Instagram Feed & Reels.
+- **Goals:** Brand awareness, engagement, interaction & sales, consistent branding.
 
-- **Place.** The room, the light, the corner people ask for by name.
-- **Craft.** Brew method, bean origin, the small decisions behind a cup.
-- **People.** Regulars, staff, the conversations that only happen here.
-- **Rhythm.** What is happening this week, so a visit has a reason.
+## Scope of work
 
-Product shots exist, but they support the pillars rather than leading them.
+1. Content planning & strategy
+2. Content creation (photos & graphics)
+3. Copywriting & caption writing
+4. Hashtag research & optimization
+5. Community management
+6. Performance analysis & reporting
+
+## Content pillars
+
+- **Menu & product highlight.** Drinks and food, priced and described plainly.
+- **Coffee education.** Brew methods, bean origin, small decisions behind a cup.
+- **Ambience & atmosphere.** The room, the light, the corner people ask for by name.
+- **Events & promotion.** Grand opening, promos, seasonal menus.
+- **Community & connection.** Regulars, staff, conversations that only happen here.
+- **Quotes & inspiration.** Warm spoken lines, not marketing speak.
 
 ## Designing for a small team
 
-The system had to be shootable on a phone in under ten minutes a day. That ruled out styled sets and lighting rigs. The recurring series format is built around what is already happening in the room, which means the content gets made while the shop runs.
+The system had to be shootable on a phone in under ten minutes a day. No styled sets, no lighting rigs. The recurring series format is built around what already happens in the room, so content gets made while the shop runs.
 
-## Voice
+## What this sample shows
 
-Warm and spoken, not marketing. The Indonesian and English guides describe the same tone in each language rather than translating literally, because a direct translation loses the room's character.
+How nine posts read as one grid, how pillars map to a weekly rhythm, and how the same warm tone survives in two languages. Planning work is real; numbers are not claimed.
