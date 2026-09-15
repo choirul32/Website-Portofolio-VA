@@ -24,8 +24,8 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
   <section class="sec pt-[clamp(32px,4vw,56px)]">
     <div class="wrap">
       {
-        cases.map((entry) => (
-          <CaseCard entry={entry} href={`/work/${entry.slug}`} showBody={false} />
+        cases.map((entry, i) => (
+          <CaseCard entry={entry} href={`/work/${entry.slug}`} showBody={false} flip={i % 2 === 1} />
         ))
       }
     </div>

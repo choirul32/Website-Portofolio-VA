@@ -6,119 +6,141 @@ interface Props {
   href?: string;
   showBody?: boolean;
   heading?: "h1" | "h2" | "h3";
+  flip?: boolean;
 }
 
-const { entry, href, showBody = true, heading = "h3" } = Astro.props;
+const { entry, href, showBody = true, heading = "h3", flip = false } = Astro.props;
 const Heading = heading;
 const d = entry.data;
 
 const toneClass = `case-${d.tone}`;
 const isConcept = d.type === "concept";
 const badgeLabel = isConcept ? "Concept project" : "Client work";
+const coverRatio = d.cover?.ratio ?? "square";
+const mediaRatioClass =
+  coverRatio === "portrait"
+    ? "aspect-[3/4]"
+    : coverRatio === "landscape"
+      ? "aspect-[16/10]"
+      : "aspect-square";
 ---
 
 <article class:list={["case", toneClass]}>
-  {
-    d.cover && (
-      <div class="overflow-hidden bg-black/20">
-        <img
-          src={d.cover.src}
-          alt={d.cover.alt}
-          loading="lazy"
-          decoding="async"
-          class="h-auto w-full object-cover"
-        />
-      </div>
-    )
-  }
-
-  <div class="case-in">
-    <div class="flex flex-wrap items-end justify-between gap-x-7 gap-y-3">
-      <span class="script !text-[clamp(22px,2.6vw,32px)] text-cream-90">
-        {isConcept ? "Project for" : d.client}
-      </span>
-      <span class="case-badge">{badgeLabel}</span>
-    </div>
-
-    <Heading class="case-title mt-3.5">
-      {
-        href ? (
-          <a href={href} class="transition-opacity hover:opacity-80">
-            {d.title}
-          </a>
-        ) : (
-          d.title
-        )
-      }
-    </Heading>
-
-    <p class="mt-2.5 text-sm font-medium uppercase tracking-[0.1em] text-cream-70">
-      {d.discipline} · {d.year}
-    </p>
-
+  <div class:list={["case-split", d.cover && flip && "case-flip", !d.cover && "case-single"]}>
     {
-      d.metrics?.length ? (
-        <dl class="mt-[30px] flex flex-wrap gap-x-11 gap-y-5">
-          {d.metrics.map((m) => (
-            <div>
-              <dd class="m-0 font-display text-[clamp(34px,4.6vw,56px)] leading-[0.9]">
-                {m.value}
-              </dd>
-              <dt class="mt-1.5 text-[11px] font-medium uppercase tracking-[0.13em] text-cream-70">
-                {m.label}
-              </dt>
-            </div>
-          ))}
-        </dl>
-      ) : (
-        <p class="mt-[30px] font-serif text-[clamp(18px,2vw,24px)] italic text-cream-90">
-          No metrics. Concept work only.
-        </p>
-      )
-    }
-
-    {
-      showBody && (
-        <div class="mt-[34px] grid gap-[30px] lg:grid-cols-2 lg:gap-12">
-          <div>
-            <h4 class="case-label">Scope of work</h4>
-            <ul class="case-list mt-1">
-              {d.deliverables.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-          </div>
-
-          {d.tools?.length && (
-            <div>
-              <h4 class="case-label">My tools</h4>
-              <ul class="case-list mt-1">
-                {d.tools.map((tool) => (
-                  <li>{tool}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+      d.cover && (
+        <div class:list={["case-media", mediaRatioClass]}>
+          {
+            href ? (
+              <a href={href} class="case-media-link" aria-label={d.title}>
+                <img
+                  src={d.cover.src}
+                  alt={d.cover.alt}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+            ) : (
+              <img
+                src={d.cover.src}
+                alt={d.cover.alt}
+                loading="lazy"
+                decoding="async"
+              />
+            )
+          }
         </div>
       )
     }
 
-    {
-      isConcept && (
-        <p class="case-note">
-          {d.summary} There is no client, no live account, and no growth to report. The planning
-          work is real; the numbers are not claimed.
-        </p>
-      )
-    }
+    <div class="case-in">
+      <div class="flex flex-wrap items-end justify-between gap-x-7 gap-y-3">
+        <span class="script !text-[clamp(22px,2.6vw,32px)] text-cream-90">
+          {isConcept ? "Project for" : d.client}
+        </span>
+        <span class="case-badge">{badgeLabel}</span>
+      </div>
 
-    {
-      !isConcept && showBody && (
-        <p class="case-note">
-          White-label accounts, so handles stay confidential. Reach and follower numbers are not
-          published here. The throughput above is what I control directly.
-        </p>
-      )
-    }
+      <Heading class="case-title mt-3.5">
+        {
+          href ? (
+            <a href={href} class="transition-opacity hover:opacity-80">
+              {d.title}
+            </a>
+          ) : (
+            d.title
+          )
+        }
+      </Heading>
+
+      <p class="mt-2.5 text-sm font-medium uppercase tracking-[0.1em] text-cream-70">
+        {d.discipline} · {d.year}
+      </p>
+
+      {
+        d.metrics?.length ? (
+          <dl class="mt-[30px] flex flex-wrap gap-x-11 gap-y-5">
+            {d.metrics.map((m) => (
+              <div>
+                <dd class="m-0 font-display text-[clamp(34px,4.6vw,56px)] leading-[0.9]">
+                  {m.value}
+                </dd>
+                <dt class="mt-1.5 text-[11px] font-medium uppercase tracking-[0.13em] text-cream-70">
+                  {m.label}
+                </dt>
+              </div>
+            ))}
+          </dl>
+        ) : (
+          <p class="mt-[30px] font-serif text-[clamp(18px,2vw,24px)] italic text-cream-90">
+            No metrics. Concept work only.
+          </p>
+        )
+      }
+
+      {
+        showBody && (
+          <div class="mt-[34px] grid gap-[30px] lg:grid-cols-2 lg:gap-12">
+            <div>
+              <h4 class="case-label">Scope of work</h4>
+              <ul class="case-list mt-1">
+                {d.deliverables.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+
+            {d.tools?.length && (
+              <div>
+                <h4 class="case-label">My tools</h4>
+                <ul class="case-list mt-1">
+                  {d.tools.map((tool) => (
+                    <li>{tool}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )
+      }
+
+      {
+        isConcept && (
+          <p class="case-note">
+            {d.summary} There is no client, no live account, and no growth to report. The planning
+            work is real; the numbers are not claimed.
+          </p>
+        )
+      }
+
+      {
+        !isConcept && showBody && (
+          <p class="case-note">
+            White-label accounts, so handles stay confidential. Reach and follower numbers are not
+            published here. The throughput above is what I control directly.
+          </p>
+        )
+      }
+    </div>
   </div>
 </article>

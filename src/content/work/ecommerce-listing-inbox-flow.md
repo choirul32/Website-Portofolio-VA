@@ -6,7 +6,7 @@ year: "2026"
 discipline: "E-commerce operations"
 tone: "ink"
 summary: "Sample project: the daily operating flow of a small Shopify store — product listings, inventory sync, order processing, and a customer inbox with reply templates. Concept work, no client results claimed."
-order: 5
+order: 7
 deliverables:
   - "Product listing SOP: title, SKU, variants, tags, and SEO description template"
   - "Inventory sync checklist across Shopify and spreadsheet tracker"

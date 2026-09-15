@@ -9,20 +9,25 @@ summary: "Eight videos a day, every day, across two TikTok and two Instagram acc
 cover:
   src: "/images/work/video-format/format-set.jpg"
   alt: "Four vertical short-form video frames from different accounts, each with burned-in hook text"
+  ratio: landscape
 gallery:
   - src: "/images/work/video-format/frame-1.jpg"
     alt: "Vertical short-form video frame showing an outdoor scene"
+    ratio: portrait
     caption: "Vertical crop and safe-area framing"
   - src: "/images/work/video-format/frame-2.jpg"
     alt: "Vertical video frame with an on-screen text hook over an outdoor shot"
+    ratio: portrait
     caption: "Burned-in hook text placed above the platform UI"
   - src: "/images/work/video-format/frame-3.jpg"
     alt: "Vertical video frame of a person speaking to camera with a name label"
+    ratio: portrait
     caption: "Speaker identification held in the same position across a series"
   - src: "/images/work/video-format/frame-4.jpg"
     alt: "Vertical video frame of a person holding a product with a short caption"
+    ratio: portrait
     caption: "Product frame built for a one-second read"
-order: 1
+order: 6
 deliverables:
   - "Eight published videos per day across four accounts"
   - "Hook selection and clip cutting from raw long-form footage"

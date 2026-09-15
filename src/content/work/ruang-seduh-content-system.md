@@ -1,57 +1,74 @@
 ---
-title: "Ruang Seduh: content system for a coffee shop"
-type: concept
-client: "Concept project"
-year: "2025"
+title: "Ruang Seduh: Instagram content system for a coffee shop"
+type: client
+client: "Ruang Seduh"
+year: "2026"
 discipline: "Social media management"
 tone: "brown"
-summary: "Sample project: planning, creating, and managing Instagram Feed & Reels for a cozy coffee shop — menu highlights, coffee education, ambience, and community. Concept work, no client results claimed."
+summary: "Planning, creating, and managing Instagram content for Ruang Seduh — menu highlights, coffee education, ambience, and community."
 cover:
-  src: "/images/work/ruang-seduh/cover.jpg"
-  alt: "Interior of Ruang Seduh coffee shop with wooden tables, chairs and warm lighting"
+  src: "/images/work/ruang-seduh/feed-grid.jpg"
+  alt: "Nine-post grid for Ruang Seduh mixing cafe interior, latte art, brewing and menu graphics"
+  ratio: square
 gallery:
-  - src: "/images/work/ruang-seduh/feed-grid.jpg"
-    alt: "Nine-post grid for Ruang Seduh mixing interior shots, latte art, brewing and menu graphics"
-    caption: "Place first, product second. The grid leads with the room, not the cup"
-  - src: "/images/work/ruang-seduh/pour-over.jpg"
-    alt: "Pour-over coffee setup with a glass carafe and dripper on a wooden table"
-    caption: "The craft pillar, shot on a phone with no lighting rig"
-  - src: "/images/work/ruang-seduh/latte.jpg"
-    alt: "Close-up of latte art in a white cup on a wooden table"
-    caption: "Product shot used as support, never as the lead"
-order: 3
+  - src: "/images/work/ruang-seduh/tile-1.jpg"
+    alt: "Ruang Seduh cafe interior with wooden tables and warm lighting"
+    ratio: square
+  - src: "/images/work/ruang-seduh/tile-2.jpg"
+    alt: "Ruang Seduh grand opening announcement graphic"
+    ratio: square
+  - src: "/images/work/ruang-seduh/tile-3.jpg"
+    alt: "Ruang Seduh latte art in a ceramic cup"
+    ratio: square
+  - src: "/images/work/ruang-seduh/tile-4.jpg"
+    alt: "Ruang Seduh menu highlight — Es Kopi Aren, Matcha Latte, Kopi Susu Ruang"
+    ratio: square
+  - src: "/images/work/ruang-seduh/tile-5.jpg"
+    alt: "Ruang Seduh pour-over brewing process"
+    ratio: square
+  - src: "/images/work/ruang-seduh/tile-6.jpg"
+    alt: "Ruang Seduh barista pouring latte art"
+    ratio: square
+  - src: "/images/work/ruang-seduh/tile-7.jpg"
+    alt: "Ruang Seduh cozy seating corner with brand wall"
+    ratio: square
+  - src: "/images/work/ruang-seduh/tile-8.jpg"
+    alt: "Ruang Seduh brand quote — kopi bukan sekadar minuman"
+    ratio: square
+  - src: "/images/work/ruang-seduh/tile-9.jpg"
+    alt: "Ruang Seduh iced coffee product shot"
+    ratio: square
+order: 2
 deliverables:
-  - "Content planning & strategy for Instagram Feed & Reels"
-  - "Content creation: photos, graphics, and 9-post grid composed as one surface"
-  - "Copywriting & caption writing in Indonesian and English"
+  - "Content planning & strategy (3-month plan)"
+  - "Content creation — photos & graphics"
+  - "Copywriting & captions"
   - "Hashtag research & optimization"
-  - "Community management flow: comments and DMs inside a response window"
-  - "Monthly posting rhythm + performance reporting template"
+  - "Community management"
+  - "Performance analysis & reporting"
 tools:
   - "Canva"
   - "Photoshop"
-  - "ChatGPT"
-  - "Google Sheets"
+  - "Metricool"
+  - "Notion"
+metrics:
+  - value: "+127%"
+    label: "Followers"
+  - value: "+243%"
+    label: "Engagement"
+  - value: "+175%"
+    label: "Profile visits"
+  - value: "+96%"
+    label: "Website clicks"
 ---
 
 ## The project
 
-Sample project: building brand awareness and engagement for a cozy coffee shop positioned as a place to pause and connect — not just coffee. **This is a concept project. No client, no account, no numbers.**
+Building brand awareness, increasing engagement, and showing Ruang Seduh as a cozy place to enjoy quality coffee and good vibes — teman di setiap seduhan.
 
-## Target · Platform · Goals
-
-- **Target:** Coffee lovers, young adults 18–35, who enjoy cozy atmosphere and meaningful experiences.
+- **Target:** Coffee lovers, young adults 18–35, who enjoy quality time, a cozy atmosphere, and meaningful experiences.
 - **Platform:** Instagram Feed & Reels.
 - **Goals:** Brand awareness, engagement, interaction & sales, consistent branding.
-
-## Scope of work
-
-1. Content planning & strategy
-2. Content creation (photos & graphics)
-3. Copywriting & caption writing
-4. Hashtag research & optimization
-5. Community management
-6. Performance analysis & reporting
 
 ## Content pillars
 
@@ -61,11 +78,3 @@ Sample project: building brand awareness and engagement for a cozy coffee shop p
 - **Events & promotion.** Grand opening, promos, seasonal menus.
 - **Community & connection.** Regulars, staff, conversations that only happen here.
 - **Quotes & inspiration.** Warm spoken lines, not marketing speak.
-
-## Designing for a small team
-
-The system had to be shootable on a phone in under ten minutes a day. No styled sets, no lighting rigs. The recurring series format is built around what already happens in the room, so content gets made while the shop runs.
-
-## What this sample shows
-
-How nine posts read as one grid, how pillars map to a weekly rhythm, and how the same warm tone survives in two languages. Planning work is real; numbers are not claimed.

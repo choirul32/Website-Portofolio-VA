@@ -54,7 +54,7 @@ const gallery = entry.data.gallery ?? [];
           <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
             {gallery.map((shot) => (
               <figure class="m-0">
-                <div class="aspect-[4/3] overflow-hidden rounded-xs bg-line/40">
+                <div class:list={["overflow-hidden rounded-xs bg-line/40", (shot as { ratio?: string }).ratio === "portrait" ? "aspect-[3/4]" : (shot as { ratio?: string }).ratio === "landscape" ? "aspect-[16/10] md:col-span-2" : "aspect-square"]}>
                   <img
                     src={shot.src}
                     alt={shot.alt}

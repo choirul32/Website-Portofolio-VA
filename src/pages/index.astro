@@ -128,29 +128,10 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
     <div class="wrap">
       <SectionHead word="Feed previews" />
       <p class="lede max-w-[62ch]">
-        How the grid reads on a phone. Concept previews — handles and numbers blanked on
-        purpose, the system is what is real.
+        How each system reads on its home platform. Instagram grids for Glowyn, Ruang Seduh,
+        and Coach Reza — TikTok feeds for SkillUp and Preloved.
       </p>
-      <div class="mt-9 grid gap-8 md:grid-cols-2 md:gap-6 lg:gap-10">
-        <PhoneMockup
-          username="ruang.seduh"
-          displayName="RUANG SEDUH"
-          bio="Teman di setiap seduhan."
-          highlights={["Menu", "Coffee", "Ambience", "Events"]}
-          avatarLetter="R"
-          caption="Ruang Seduh — warm minimal feed: interior, promo, product, quote, craft."
-          tiles={[
-            { src: "/images/work/ruang-seduh/cover.jpg", alt: "Ruang Seduh cafe interior", pos: "center 30%" },
-            { src: "/images/work/ruang-seduh/feed-grid.jpg", alt: "Ruang Seduh nine-post grid", pos: "center 20%" },
-            { src: "/images/work/ruang-seduh/latte.jpg", alt: "Ruang Seduh latte art", pos: "center" },
-            { src: "/images/work/ruang-seduh/pour-over.jpg", alt: "Ruang Seduh pour-over brewing", pos: "center" },
-            { src: "/images/work/ruang-seduh/cover.jpg", alt: "Ruang Seduh cafe interior", pos: "center 60%" },
-            { src: "/images/work/ruang-seduh/latte.jpg", alt: "Ruang Seduh latte art", pos: "center 30%" },
-            { src: "/images/work/ruang-seduh/pour-over.jpg", alt: "Ruang Seduh pour-over brewing", pos: "center 70%" },
-            { src: "/images/work/ruang-seduh/feed-grid.jpg", alt: "Ruang Seduh nine-post grid", pos: "center 60%" },
-            { src: "/images/work/ruang-seduh/cover.jpg", alt: "Ruang Seduh cafe interior", pos: "center 80%" },
-          ]}
-        />
+      <div class="mt-9 grid gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10">
         <PhoneMockup
           username="glowyn.skincare"
           displayName="GLOWYN Skincare"
@@ -159,15 +140,93 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
           avatarLetter="G"
           caption="Glowyn — sage-green system: education, routine, product, proof."
           tiles={[
-            { src: "/images/work/glowyn/feed-grid.jpg", alt: "Glowyn nine-post launch grid", pos: "center 20%" },
-            { src: "/images/work/glowyn/cover.jpg", alt: "Glowyn skincare products", pos: "center" },
-            { src: "/images/work/glowyn/product-jar.jpg", alt: "Glowyn green tea moisturiser jar", pos: "center" },
-            { src: "/images/work/glowyn/brand-graphic.jpg", alt: "Glowyn brand statement graphic", pos: "center" },
-            { src: "/images/work/glowyn/feed-grid.jpg", alt: "Glowyn nine-post launch grid", pos: "center 50%" },
-            { src: "/images/work/glowyn/product-jar.jpg", alt: "Glowyn green tea moisturiser jar", pos: "center 30%" },
-            { src: "/images/work/glowyn/cover.jpg", alt: "Glowyn skincare products", pos: "center 70%" },
-            { src: "/images/work/glowyn/brand-graphic.jpg", alt: "Glowyn brand statement graphic", pos: "center 30%" },
-            { src: "/images/work/glowyn/feed-grid.jpg", alt: "Glowyn nine-post launch grid", pos: "center 80%" },
+            { src: "/images/work/glowyn/tile-1.jpg", alt: "Glowyn serum and moisturizer product duo" },
+            { src: "/images/work/glowyn/tile-2.jpg", alt: "Glowyn niacinamide education graphic" },
+            { src: "/images/work/glowyn/tile-3.jpg", alt: "Glowyn green tea gel cream product shot" },
+            { src: "/images/work/glowyn/tile-4.jpg", alt: "Glowyn morning routine graphic" },
+            { src: "/images/work/glowyn/tile-5.jpg", alt: "Glowyn brand statement graphic" },
+            { src: "/images/work/glowyn/tile-6.jpg", alt: "Glowyn night routine graphic" },
+            { src: "/images/work/glowyn/tile-7.jpg", alt: "Glowyn gentle cleanser product shot" },
+            { src: "/images/work/glowyn/tile-8.jpg", alt: "Glowyn centella education graphic" },
+            { src: "/images/work/glowyn/tile-9.jpg", alt: "Glowyn hyaluronic acid education graphic" },
+          ]}
+        />
+        <PhoneMockup
+          username="ruang.seduh"
+          displayName="RUANG SEDUH"
+          bio="Teman di setiap seduhan."
+          highlights={["Menu", "Coffee", "Ambience", "Events"]}
+          avatarLetter="R"
+          caption="Ruang Seduh — warm minimal feed: interior, promo, product, quote, craft."
+          tiles={[
+            { src: "/images/work/ruang-seduh/tile-1.jpg", alt: "Ruang Seduh cafe interior" },
+            { src: "/images/work/ruang-seduh/tile-2.jpg", alt: "Ruang Seduh grand opening graphic" },
+            { src: "/images/work/ruang-seduh/tile-3.jpg", alt: "Ruang Seduh latte art" },
+            { src: "/images/work/ruang-seduh/tile-4.jpg", alt: "Ruang Seduh menu highlight" },
+            { src: "/images/work/ruang-seduh/tile-5.jpg", alt: "Ruang Seduh pour-over brewing" },
+            { src: "/images/work/ruang-seduh/tile-6.jpg", alt: "Ruang Seduh barista pouring" },
+            { src: "/images/work/ruang-seduh/tile-7.jpg", alt: "Ruang Seduh seating corner" },
+            { src: "/images/work/ruang-seduh/tile-8.jpg", alt: "Ruang Seduh brand quote" },
+            { src: "/images/work/ruang-seduh/tile-9.jpg", alt: "Ruang Seduh iced coffee" },
+          ]}
+        />
+        <PhoneMockup
+          username="coach.reza.fit"
+          displayName="COACH REZA FIT"
+          bio="Disiplin hari ini, hasil hebat di masa depan."
+          highlights={["Form", "Program", "Nutrition", "Quotes"]}
+          avatarLetter="C"
+          caption="Coach Reza — black-and-yellow energy: form checks, offers, proof."
+          tiles={[
+            { src: "/images/work/coach-reza/tile-1.jpg", alt: "Coach Reza squat form check" },
+            { src: "/images/work/coach-reza/tile-2.jpg", alt: "Coach Reza motivational quote" },
+            { src: "/images/work/coach-reza/tile-3.jpg", alt: "Coach Reza push up guide" },
+            { src: "/images/work/coach-reza/tile-4.jpg", alt: "Coach Reza profile intro" },
+            { src: "/images/work/coach-reza/tile-5.jpg", alt: "Coach Reza online coaching pricing" },
+            { src: "/images/work/coach-reza/tile-6.jpg", alt: "Coach Reza client transformation" },
+            { src: "/images/work/coach-reza/tile-7.jpg", alt: "Coach Reza deadlift form check" },
+            { src: "/images/work/coach-reza/tile-8.jpg", alt: "Coach Reza consistency quote" },
+            { src: "/images/work/coach-reza/tile-9.jpg", alt: "Coach Reza nutrition guide" },
+          ]}
+        />
+        <PhoneMockup
+          username="skillup.academy"
+          displayName="SkillUp Academy"
+          bio="Skill lebih penting dari IPK. Yuk, upgrade diri!"
+          highlights={["Tips", "Kursus", "Karier"]}
+          avatarLetter="S"
+          platform="tiktok"
+          caption="SkillUp — TikTok feed: navy-and-yellow tips, offers, alumni proof."
+          tiles={[
+            { src: "/images/work/skillup/tile-1.jpg", alt: "SkillUp hook post", ratio: "portrait" },
+            { src: "/images/work/skillup/tile-2.jpg", alt: "SkillUp study tips", ratio: "portrait" },
+            { src: "/images/work/skillup/tile-3.jpg", alt: "SkillUp bootcamp offer", ratio: "portrait" },
+            { src: "/images/work/skillup/tile-4.jpg", alt: "SkillUp Excel shortcut", ratio: "portrait" },
+            { src: "/images/work/skillup/tile-5.jpg", alt: "SkillUp alumni testimonial", ratio: "portrait" },
+            { src: "/images/work/skillup/tile-6.jpg", alt: "SkillUp in-demand skills", ratio: "portrait" },
+            { src: "/images/work/skillup/tile-7.jpg", alt: "SkillUp behind the scenes", ratio: "portrait" },
+            { src: "/images/work/skillup/tile-8.jpg", alt: "SkillUp portfolio tips", ratio: "portrait" },
+            { src: "/images/work/skillup/tile-9.jpg", alt: "SkillUp flexible learning", ratio: "portrait" },
+          ]}
+        />
+        <PhoneMockup
+          username="preloved.bynara"
+          displayName="Preloved by Nara"
+          bio="Thrift smart, look amazing."
+          highlights={["Drop", "Styling", "Packing"]}
+          avatarLetter="P"
+          platform="tiktok"
+          caption="Preloved by Nara — TikTok feed: pastel drops, styling, trust."
+          tiles={[
+            { src: "/images/work/preloved/tile-1.jpg", alt: "Preloved haul drop", ratio: "portrait" },
+            { src: "/images/work/preloved/tile-2.jpg", alt: "Preloved styling challenge", ratio: "portrait" },
+            { src: "/images/work/preloved/tile-3.jpg", alt: "Preloved Friday drop", ratio: "portrait" },
+            { src: "/images/work/preloved/tile-4.jpg", alt: "Preloved curation process", ratio: "portrait" },
+            { src: "/images/work/preloved/tile-5.jpg", alt: "Preloved packing order", ratio: "portrait" },
+            { src: "/images/work/preloved/tile-6.jpg", alt: "Preloved thrifting tips", ratio: "portrait" },
+            { src: "/images/work/preloved/tile-7.jpg", alt: "Preloved transformation", ratio: "portrait" },
+            { src: "/images/work/preloved/tile-8.jpg", alt: "Preloved buyer testimonials", ratio: "portrait" },
+            { src: "/images/work/preloved/tile-9.jpg", alt: "Preloved style on budget", ratio: "portrait" },
           ]}
         />
       </div>
@@ -183,6 +242,7 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
             entry={entry}
             href={`/work/${entry.slug}`}
             showBody={i === 0}
+            flip={i % 2 === 1}
           />
         ))
       }

@@ -9,6 +9,7 @@ const shot = z.object({
   src: z.string(),
   alt: z.string(),
   caption: z.string().optional(),
+  ratio: z.enum(["square", "portrait", "landscape"]).optional(),
 });
 
 const work = defineCollection({

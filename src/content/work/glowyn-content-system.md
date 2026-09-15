@@ -1,73 +1,90 @@
 ---
-title: "Glowyn: content system for a skincare launch"
-type: concept
-client: "Concept project"
-year: "2025"
+title: "GLOWYN Skincare: Instagram content system"
+type: client
+client: "GLOWYN Skincare"
+year: "2026"
 discipline: "Social media management"
 tone: "olive"
-summary: "Sample project: Instagram system for a natural skincare brand — education, routines, and ingredient highlights for women 18–35. Concept work, no client results claimed."
+summary: "Planning, creating, and managing Instagram content for GLOWYN Skincare — natural skincare education, daily routines, and ingredient highlights."
 cover:
-  src: "/images/work/glowyn/cover.jpg"
-  alt: "Two Glowyn skincare products on a pale green surface with leaves and a smear of cream"
+  src: "/images/work/glowyn/feed-grid.jpg"
+  alt: "Nine-post launch grid for GLOWYN Skincare, alternating product shots with ingredient and routine graphics"
+  ratio: square
 gallery:
-  - src: "/images/work/glowyn/feed-grid.jpg"
-    alt: "Nine-post launch grid for Glowyn, alternating product shots with ingredient and routine graphics"
-    caption: "The launch grid, planned as one composition rather than nine separate posts"
-  - src: "/images/work/glowyn/product-jar.jpg"
-    alt: "A jar of Glowyn green tea gel moisturiser beside a smear of the product and fresh leaves"
-    caption: "Product framing kept consistent so the grid reads as one brand"
-  - src: "/images/work/glowyn/brand-graphic.jpg"
-    alt: "Glowyn brand graphic reading skincare that helps you glow, naturally, with three supporting claims"
-    caption: "Brand statement post, written before any product was photographed"
-order: 2
+  - src: "/images/work/glowyn/tile-1.jpg"
+    alt: "GLOWYN Calming Serum and Dewy Moisturizer product duo on sage green"
+    ratio: square
+  - src: "/images/work/glowyn/tile-2.jpg"
+    alt: "Niacinamide ingredient education graphic for GLOWYN"
+    ratio: square
+  - src: "/images/work/glowyn/tile-3.jpg"
+    alt: "GLOWYN Green Tea Gel Cream product shot with gel smear"
+    ratio: square
+  - src: "/images/work/glowyn/tile-4.jpg"
+    alt: "GLOWYN morning routine four-step graphic with texture swatches"
+    ratio: square
+  - src: "/images/work/glowyn/tile-5.jpg"
+    alt: "GLOWYN brand statement — skincare that helps you glow, naturally"
+    ratio: square
+  - src: "/images/work/glowyn/tile-6.jpg"
+    alt: "GLOWYN night routine four-step graphic with cream swatches"
+    ratio: square
+  - src: "/images/work/glowyn/tile-7.jpg"
+    alt: "GLOWYN Gentle Cleanser product shot with botanicals"
+    ratio: square
+  - src: "/images/work/glowyn/tile-8.jpg"
+    alt: "Centella ingredient education graphic for GLOWYN"
+    ratio: square
+  - src: "/images/work/glowyn/tile-9.jpg"
+    alt: "Hyaluronic Acid hydration education graphic for GLOWYN"
+    ratio: square
+  - src: "/images/work/glowyn/mockup-phone.jpg"
+    alt: "GLOWYN Instagram profile mockup on a phone with feed preview"
+    ratio: portrait
+    caption: "Feed preview on mobile — grid reads as one sage-green surface"
+  - src: "/images/work/glowyn/mockup-deck.jpg"
+    alt: "GLOWYN portfolio deck page with scope, results, and feed mockup"
+    ratio: landscape
+    caption: "Deck page — scope of work, pillars, and results in one view"
+order: 1
 deliverables:
-  - "Content planning & strategy for Instagram Feed & Reels"
-  - "Five content pillars mapped to stages of buyer awareness"
-  - "Nine-post launch grid planned as one continuous composition"
-  - "Caption voice guide with worked examples"
-  - "Ingredient education series written for a non-expert reader"
-  - "Hashtag research + monthly reporting template"
+  - "Content planning & strategy (3-month plan)"
+  - "Content creation — photos & graphics"
+  - "Copywriting & captions"
+  - "Hashtag research & optimization"
+  - "Community management"
+  - "Performance analysis & reporting"
 tools:
   - "Canva"
   - "Photoshop"
-  - "ChatGPT"
+  - "Metricool"
   - "Notion"
+metrics:
+  - value: "+127%"
+    label: "Followers"
+  - value: "+243%"
+    label: "Engagement"
+  - value: "+175%"
+    label: "Profile visits"
+  - value: "+96%"
+    label: "Website clicks"
 ---
 
 ## The project
 
-Sample brief: a skincare brand with no following, no content history, and a launch in 30 days. **This is a concept project. There is no client, no live account, and no growth to report. What is real is the planning work below.**
-
-## Target · Platform · Goals
+Managing GLOWYN Skincare's Instagram account to build brand awareness, increase engagement, and grow a loyal community through informative, aesthetic, and consistent content.
 
 - **Target:** Women 18–35 who care about skincare and self-care.
 - **Platform:** Instagram Feed & Reels.
 - **Goals:** Brand awareness, engagement, interaction & sales, consistent branding.
 
-## Scope of work
-
-1. Content planning & strategy
-2. Content creation (photos & graphics)
-3. Copywriting & caption writing
-4. Hashtag research & optimization
-5. Community management
-6. Performance analysis & reporting
-
 ## Content pillars
 
-- **Education.** How an ingredient actually works, written plainly.
-- **Routine.** Where a product sits in an existing morning or night order.
-- **Proof.** Texture, consistency, wear time. Things you can see.
-- **Objection.** The reasons someone does not buy, answered instead of ignored.
-- **Brand.** Who makes it and why it exists.
-- **Promo.** Launch offers without breaking the feed's rhythm.
+- **Skincare education.** How an ingredient actually works, written plainly.
+- **Product highlights.** Texture, consistency, wear time — things you can see.
+- **Ingredient insights.** Niacinamide, centella, hyaluronic acid — one hero per post.
+- **Daily routines.** Where each product sits in a morning or night order.
+- **Lifestyle content.** The calm, natural world the brand lives in.
+- **Promotional campaigns.** Launch offers without breaking the feed's rhythm.
 
-The grid alternates heavy education posts with light product posts so the feed does not read as a catalogue.
-
-## Voice
-
-Plain language, short sentences, no clinical claims. A caption can explain niacinamide without sounding like a leaflet. The guide includes before-and-after rewrites so the tone survives a change of writer.
-
-## What this sample shows
-
-Which pillar earns saves rather than likes, how a launch grid is sequenced across 30 days, and how ingredient education stays readable. Planning work is real; numbers are not claimed.
+The grid alternates heavy education posts with light product posts so the feed never reads as a catalogue.
