@@ -26,3 +26,8 @@ desktop.ini
 .vscode/*
 !.vscode/extensions.json
 .idea/
+
+# working files (not part of the site)
+*.pdf
+style-preview.html
+.commandcode/
