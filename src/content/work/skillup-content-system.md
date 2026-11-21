@@ -38,7 +38,7 @@ gallery:
   - src: "/images/work/skillup/tile-9.jpg"
     alt: "SkillUp flexible learning offer — belajar kapan saja di mana saja"
     ratio: portrait
-order: 4
+order: 5
 deliverables:
   - "Content planning & strategy for TikTok Feed"
   - "Tips and shortcut series with save-worthy formatting"

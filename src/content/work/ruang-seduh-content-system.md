@@ -38,7 +38,7 @@ gallery:
   - src: "/images/work/ruang-seduh/tile-9.jpg"
     alt: "Ruang Seduh iced coffee product shot"
     ratio: square
-order: 2
+order: 3
 deliverables:
   - "Content planning & strategy (3-month plan)"
   - "Content creation — photos & graphics"

@@ -46,7 +46,7 @@ gallery:
     alt: "GLOWYN portfolio deck page with scope, results, and feed mockup"
     ratio: landscape
     caption: "Deck page — scope of work, pillars, and results in one view"
-order: 1
+order: 2
 deliverables:
   - "Content planning & strategy (3-month plan)"
   - "Content creation — photos & graphics"

@@ -17,7 +17,7 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
 
 <BaseLayout
   title={`${site.name} — ${site.role}`}
-  description="Short-form content operations for agencies and brands. Four client accounts, eight videos a day, published without missing a slot."
+  description="Short-form publishing for agencies & creators. Clips scheduled, captioned and posted daily on TikTok & Reels — four client accounts, eight videos a day."
   currentPage="home"
 >
   <section class="pt-10">
@@ -27,14 +27,14 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
           {site.name}
         </span>
         <p class="max-w-[30ch] text-[15px] font-light leading-relaxed text-body">
-          Helping agencies and brands keep a publishing calendar that never goes quiet.
+          Helping agencies and creators keep a publishing calendar that never goes quiet.
         </p>
       </div>
       <p class="kick mt-[clamp(28px,5vw,56px)] text-muted">Portfolio</p>
-      <h1 class="display display-l mt-3">Daily content, handled.</h1>
+      <h1 class="display mt-3 max-w-[16ch] text-[clamp(40px,7.5vw,104px)]">Short-form publishing for agencies &amp; creators.</h1>
       <p class="lede mt-5 max-w-[52ch]">
-        I run TikTok &amp; Instagram publishing for busy brands — hooks, captions, and posting
-        every day, in your voice. You send raw footage, your calendar stays full.
+        Your clips scheduled, captioned and posted daily on TikTok &amp; Reels. You send raw
+        footage, I run the queue — white-label for agencies.
       </p>
       <div class="mt-7 flex flex-wrap gap-3">
         <a class="btn btn-solid" href="#pricing">See packages</a>
@@ -237,12 +237,18 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
     <div class="wrap">
       <SectionHead word="Selected work" />
       {
-        cases.map((entry, i) => (
+        cases.slice(0, 1).map((entry) => (
+          <CaseCard entry={entry} href={`/work/${entry.slug}`} showBody />
+        ))
+      }
+      <h3 class="kick mb-6 mt-[clamp(40px,6vw,72px)] text-muted">Content systems · Indonesian brands</h3>
+      {
+        cases.slice(1).map((entry, i) => (
           <CaseCard
             entry={entry}
             href={`/work/${entry.slug}`}
-            showBody={i === 0}
-            flip={i % 2 === 1}
+            showBody={false}
+            flip={i % 2 === 0}
           />
         ))
       }

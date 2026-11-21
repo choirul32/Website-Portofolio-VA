@@ -38,7 +38,7 @@ gallery:
   - src: "/images/work/preloved/tile-9.jpg"
     alt: "Style on a budget brand statement"
     ratio: portrait
-order: 5
+order: 6
 deliverables:
   - "Content planning & strategy for TikTok Feed"
   - "Weekly drop calendar (Friday drop rhythm)"

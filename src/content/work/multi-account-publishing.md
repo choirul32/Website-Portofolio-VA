@@ -27,7 +27,7 @@ gallery:
     alt: "Vertical video frame of a person holding a product with a short caption"
     ratio: portrait
     caption: "Product frame built for a one-second read"
-order: 6
+order: 1
 deliverables:
   - "Eight published videos per day across four accounts"
   - "Hook selection and clip cutting from raw long-form footage"

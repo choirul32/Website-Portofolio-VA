@@ -61,8 +61,8 @@ export const testimonials = [
 
 export const aiWorkflow = [
   { title: "Prompt library", detail: "One library per brand voice — hooks, captions, and replies drafted in your tone, not generic AI speak.", icon: "pen" },
-  { title: "Draft in minutes", detail: "AI writes the first version of listings, captions, and inbox replies. I refine, fact-check, and match your voice.", icon: "send" },
-  { title: "Queue automation", detail: "Scheduling and order tracking run on automation (Zapier/Make + Sheets) so nothing depends on memory.", icon: "calendar" },
+  { title: "Draft in minutes", detail: "AI writes the first version of hooks, captions, and comment replies. I refine, fact-check, and match your voice.", icon: "send" },
+  { title: "Queue automation", detail: "Scheduling and posting logs run on automation (Zapier/Make + Sheets) so nothing depends on memory.", icon: "calendar" },
   { title: "Human check", detail: "Nothing customer-facing goes live unchecked — every AI output passes a human read before publish.", icon: "chart" },
 ];
 
@@ -111,19 +111,21 @@ export const packages = [
     cta: "https://wa.me/6282226551246?text=Hi%20Choirul%2C%20I%27m%20interested%20in%20the%20Growth%20package%20(%24179%2Fmo).",
   },
   {
-    name: "Scale",
+    name: "Agency",
     price: "$379",
-    per: "/month",
-    desc: "Your whole short-form operation, handled.",
+    per: "/month · 4 accounts",
+    desc: "White-label publishing for agencies — about $95 per client account.",
     featured: false,
     features: [
-      "Up to 4 accounts, daily posting",
+      "4 client accounts, daily posting",
+      "White-label — your agency name on every report",
+      "Extra accounts $90/month each",
       "Everything in Growth",
       "Monthly 30-min strategy call",
       "Priority WhatsApp line",
       "Quarterly content pillar refresh",
     ],
-    cta: "https://wa.me/6282226551246?text=Hi%20Choirul%2C%20I%27m%20interested%20in%20the%20Scale%20package%20(%24379%2Fmo).",
+    cta: "https://wa.me/6282226551246?text=Hi%20Choirul%2C%20I%27m%20interested%20in%20the%20Agency%20package%20(%24379%2Fmo).",
   },
 ];
 

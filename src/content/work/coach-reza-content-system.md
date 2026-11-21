@@ -38,7 +38,7 @@ gallery:
   - src: "/images/work/coach-reza/tile-9.jpg"
     alt: "Nutrition education — makan enak tetap bisa fit"
     ratio: square
-order: 3
+order: 4
 deliverables:
   - "Content planning & strategy for Instagram Feed & Reels"
   - "Form-check education series (squat, push up, deadlift)"
