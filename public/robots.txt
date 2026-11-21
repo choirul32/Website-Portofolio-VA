@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://choirulanwar.com/sitemap.xml
+Sitemap: https://website-portofolio-va-ruby.vercel.app/sitemap.xml

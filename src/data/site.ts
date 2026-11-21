@@ -10,7 +10,7 @@ export const site = {
   // Hidden until the profile URL is confirmed.
   upworkHref: "",
   location: "Indonesia · UTC+7",
-  siteUrl: "https://choirulanwar.com",
+  siteUrl: "https://website-portofolio-va-ruby.vercel.app",
 };
 
 export const stats = [
@@ -67,6 +67,20 @@ export const aiWorkflow = [
 ];
 
 export const packages = [
+  {
+    name: "Trial week",
+    price: "$19",
+    per: "/one week",
+    desc: "Try the workflow before you commit to a month.",
+    featured: false,
+    features: [
+      "6 posts in 7 days",
+      "1 account — TikTok or Instagram",
+      "Hooks, captions & hashtags in your voice",
+      "$19 credited if you continue on a monthly plan",
+    ],
+    cta: "https://wa.me/6282226551246?text=Hi%20Choirul%2C%20I%27d%20like%20to%20try%20the%20Trial%20week%20(%2419).",
+  },
   {
     name: "Starter",
     price: "$79",

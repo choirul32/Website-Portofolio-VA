@@ -15,7 +15,7 @@ const d = entry.data;
 
 const toneClass = `case-${d.tone}`;
 const isConcept = d.type === "concept";
-const badgeLabel = isConcept ? "Concept project" : "Client work";
+const badgeLabel = isConcept ? "" : "Client work";
 const coverRatio = d.cover?.ratio ?? "square";
 const mediaRatioClass =
   coverRatio === "portrait"
@@ -56,9 +56,9 @@ const mediaRatioClass =
     <div class="case-in">
       <div class="flex flex-wrap items-end justify-between gap-x-7 gap-y-3">
         <span class="script !text-[clamp(22px,2.6vw,32px)] text-cream-90">
-          {isConcept ? "Project for" : d.client}
+          {isConcept ? "Concept project" : d.client}
         </span>
-        <span class="case-badge">{badgeLabel}</span>
+        {badgeLabel && <span class="case-badge">{badgeLabel}</span>}
       </div>
 
       <Heading class="case-title mt-3.5">
@@ -93,7 +93,7 @@ const mediaRatioClass =
           </dl>
         ) : (
           <p class="mt-[30px] font-serif text-[clamp(18px,2vw,24px)] italic text-cream-90">
-            No metrics. Concept work only.
+            {isConcept ? "No metrics. Concept work only." : "Results shared on request, with the client's approval."}
           </p>
         )
       }
@@ -134,7 +134,7 @@ const mediaRatioClass =
       }
 
       {
-        !isConcept && showBody && (
+        !isConcept && showBody && d.metrics?.length && (
           <p class="case-note">
             White-label accounts, so handles stay confidential. Reach and follower numbers are not
             published here. The throughput above is what I control directly.

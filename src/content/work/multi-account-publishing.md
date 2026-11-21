@@ -1,7 +1,7 @@
 ---
 title: "Daily publishing across four client accounts"
 type: client
-client: "Agency via Upwork"
+client: "US content agency (via Upwork)"
 year: "2025"
 discipline: "Short-form content operations"
 tone: "ink"

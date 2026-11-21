@@ -59,15 +59,6 @@ tools:
   - "Photoshop"
   - "Metricool"
   - "Notion"
-metrics:
-  - value: "+127%"
-    label: "Followers"
-  - value: "+243%"
-    label: "Engagement"
-  - value: "+175%"
-    label: "Profile visits"
-  - value: "+96%"
-    label: "Website clicks"
 ---
 
 ## The project

@@ -12,7 +12,7 @@ interface Props {
 
 const {
   title,
-  description = "TikTok & Instagram publishing for busy brands — hooks, captions, and daily posting in your voice. Packages from $79/mo, free sample to start.",
+  description = "TikTok & Instagram publishing for busy brands — hooks, captions, and daily posting in your voice. Try one week for $19, free sample to start.",
   currentPage = "",
 } = Astro.props;
 
@@ -29,7 +29,7 @@ const personSchema = JSON.stringify({
   email: site.email,
   telephone: site.whatsapp,
   address: { "@type": "PostalAddress", addressCountry: "ID" },
-  priceRange: "$79-$379",
+  priceRange: "$19-$379",
 });
 ---
 
@@ -42,7 +42,7 @@ const personSchema = JSON.stringify({
     <meta name="description" content={description} />
     <meta
       name="keywords"
-      content="virtual assistant, content VA, TikTok VA, Instagram manager, short-form video editor, social media VA, ecommerce VA, Upwork freelancer Indonesia"
+      content="virtual assistant, content VA, TikTok VA, Instagram manager, short-form video editor, social media VA, e-commerce VA, Upwork freelancer Indonesia"
     />
     <meta name="author" content={site.name} />
     <meta name="robots" content="index, follow" />

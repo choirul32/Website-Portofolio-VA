@@ -7,7 +7,6 @@ import ServiceIcon from "../components/ServiceIcon.astro";
 import CaseCard from "../components/CaseCard.astro";
 import PhoneMockup from "../components/PhoneMockup.astro";
 import Pricing from "../components/Pricing.astro";
-import Testimonials from "../components/Testimonials.astro";
 import AiWorkflow from "../components/AiWorkflow.astro";
 import Faq from "../components/Faq.astro";
 import { getCollection } from "astro:content";
@@ -129,7 +128,8 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
       <SectionHead word="Feed previews" />
       <p class="lede max-w-[62ch]">
         How each system reads on its home platform. Instagram grids for Glowyn, Ruang Seduh,
-        and Coach Reza — TikTok feeds for SkillUp and Preloved.
+        and Coach Reza — TikTok feeds for SkillUp and Preloved. Brands aimed at Indonesian
+        buyers get their post copy in Indonesian.
       </p>
       <div class="mt-9 grid gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10">
         <PhoneMockup
@@ -154,7 +154,7 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
         <PhoneMockup
           username="ruang.seduh"
           displayName="RUANG SEDUH"
-          bio="Teman di setiap seduhan."
+          bio="Your companion in every brew."
           highlights={["Menu", "Coffee", "Ambience", "Events"]}
           avatarLetter="R"
           caption="Ruang Seduh — warm minimal feed: interior, promo, product, quote, craft."
@@ -173,7 +173,7 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
         <PhoneMockup
           username="coach.reza.fit"
           displayName="COACH REZA FIT"
-          bio="Disiplin hari ini, hasil hebat di masa depan."
+          bio="Discipline today, great results tomorrow."
           highlights={["Form", "Program", "Nutrition", "Quotes"]}
           avatarLetter="C"
           caption="Coach Reza — black-and-yellow energy: form checks, offers, proof."
@@ -192,8 +192,8 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
         <PhoneMockup
           username="skillup.academy"
           displayName="SkillUp Academy"
-          bio="Skill lebih penting dari IPK. Yuk, upgrade diri!"
-          highlights={["Tips", "Kursus", "Karier"]}
+          bio="Skills over GPA. Level up today!"
+          highlights={["Tips", "Courses", "Careers"]}
           avatarLetter="S"
           platform="tiktok"
           caption="SkillUp — TikTok feed: navy-and-yellow tips, offers, alumni proof."
@@ -275,7 +275,6 @@ const cases = (await getCollection("work")).sort((a, b) => a.data.order - b.data
 
   <Pricing />
 
-  <Testimonials />
 
   <AiWorkflow />
 

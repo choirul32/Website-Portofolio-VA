@@ -51,20 +51,11 @@ tools:
   - "Photoshop"
   - "Metricool"
   - "Notion"
-metrics:
-  - value: "+127%"
-    label: "Followers"
-  - value: "+243%"
-    label: "Engagement"
-  - value: "+175%"
-    label: "Profile visits"
-  - value: "+96%"
-    label: "Website clicks"
 ---
 
 ## The project
 
-Building brand awareness, increasing engagement, and showing Ruang Seduh as a cozy place to enjoy quality coffee and good vibes — teman di setiap seduhan.
+Building brand awareness, increasing engagement, and showing Ruang Seduh as a cozy place to enjoy quality coffee and good vibes — "a companion in every brew."
 
 - **Target:** Coffee lovers, young adults 18–35, who enjoy quality time, a cozy atmosphere, and meaningful experiences.
 - **Platform:** Instagram Feed & Reels.
