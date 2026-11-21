@@ -30,16 +30,54 @@ const shown = tiles.slice(0, 9);
 
     {
       isTikTok ? (
-        <div class="flex items-center gap-3 px-4 py-2.5">
-          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink font-serif text-lg font-semibold text-canvas">
-            {avatarLetter}
+        <Fragment>
+          <div class="flex items-center gap-3 px-4 py-2.5">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink font-serif text-lg font-semibold text-canvas">
+              {avatarLetter}
+            </div>
+            <div class="min-w-0">
+              <p class="truncate text-sm font-bold text-ink">{username}</p>
+              <p class="truncate text-xs text-muted">{displayName}</p>
+            </div>
+            <span class="ml-auto shrink-0 rounded-full bg-ink px-3 py-1 text-[11px] font-semibold text-canvas">Follow</span>
           </div>
-          <div class="min-w-0">
-            <p class="truncate text-sm font-bold text-ink">{username}</p>
-            <p class="truncate text-xs text-muted">{displayName}</p>
+
+          <div class="flex items-center justify-around px-4 pb-1 text-center">
+            <div>
+              <p class="text-base font-bold text-ink">{tiles.length}</p>
+              <p class="text-xs text-muted">Videos</p>
+            </div>
+            <div>
+              <p class="text-base font-bold text-ink">—</p>
+              <p class="text-xs text-muted">Followers</p>
+            </div>
+            <div>
+              <p class="text-base font-bold text-ink">—</p>
+              <p class="text-xs text-muted">Likes</p>
+            </div>
           </div>
-          <span class="ml-auto shrink-0 rounded-full bg-ink px-3 py-1 text-[11px] font-semibold text-canvas">Follow</span>
-        </div>
+
+          <div class="px-4 pb-1 pt-1">
+            <p class="text-[13px] font-bold text-ink">{displayName}</p>
+            <p class="text-[13px] font-light leading-snug text-body">{bio}</p>
+          </div>
+
+          <div class="mt-1 flex border-t border-line/60" aria-hidden="true">
+            <span class="flex flex-1 justify-center border-b-2 border-ink py-2 text-ink">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+              </svg>
+            </span>
+            <span class="flex flex-1 justify-center py-2 text-muted">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+              </svg>
+            </span>
+          </div>
+        </Fragment>
       ) : (
         <Fragment>
           <div class="flex items-center justify-between px-4 py-2.5">
